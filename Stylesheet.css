@@ -189,9 +189,8 @@ h1 {
 
 
 h2 {
-
     padding: 20px;
-
+    width: 100%;
 }
 
 #search button {
@@ -285,17 +284,25 @@ a, a:hover, a:active, a:visited {
 
 
 
-.new {
+#resto1 {
+    position: relative;
+}
+
+#resto2 {
+    position: relative;
+}
+
+#resto1 .new, #resto2 .new {
     position: absolute;
-    margin-top: 10px;
-    margin-left: 60%;
+    float: right;
+    right: 20px;
+    top: 20px;
     border-radius: 5px;
     background-color: #c0e9c3;
     color: #16b84e;
     font-size: 20px;
     font-weight: bold;
     padding: 10px;
-
 }
 
 
@@ -414,6 +421,29 @@ header {
     background-color: #EAEAEA;
 }
 
+}
+
+@media screen and (min-width: 800px){
+ul {
+        display: flex;
+        justify-content: space-around; 
+}
+
+#restaurants {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 250px 250px 0px 0px;
+}
+
+#search {
+    display: flex;
+    flex-direction: initial;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+
+#search button {
+    max-width: 500px;
+}
 
 
 }
