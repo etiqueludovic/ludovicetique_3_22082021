@@ -1,0 +1,191 @@
+#menu{
+    &__entree1{
+        opacity:0;
+        animation: slide-in-bottom 0.5s ease-in 0.5s forwards;
+       }
+    &__entree2{
+        opacity:0;
+        animation: slide-in-bottom 0.5s ease-in 1s forwards;
+        }
+    &__entree3{
+        opacity:0;
+        animation: slide-in-bottom 0.5s ease-in 1.5s forwards;
+        }
+    &__entree4{
+        opacity:0;
+        animation: slide-in-bottom 0.5s ease-in 2s forwards;
+        }
+    &__plat1{
+        opacity:0;
+        animation: slide-in-bottom 0.5s ease-in 0.5s forwards;
+        }
+    &__plat2{
+        opacity:0;
+        animation: slide-in-bottom 0.5s ease-in 1s forwards;
+        }
+    &__plat3{
+        opacity:0;
+        animation: slide-in-bottom 0.5s ease-in 1.5s forwards;
+        }
+    &__dess1{
+        opacity:0;
+        animation: slide-in-bottom 0.5s ease-in 0.5s forwards;
+        }
+    &__dess2{
+        opacity:0;
+        animation: slide-in-bottom 0.5s ease-in 1s forwards;
+        }
+    &__dess3{
+        opacity:0;
+        animation: slide-in-bottom 0.5s ease-in 1.5s forwards;
+        }
+}
+
+.retour {
+        position: absolute;
+        left: 10px;
+        margin: 15px 0px 0px 30px;
+        font-size: 30px;
+        color:black;
+}
+
+#corpdepage {
+        display: flex;
+        flex-direction: column;
+    & img{
+        border-radius:0;
+        max-height:450px;
+    }
+}
+
+img {
+        max-width: 100%;
+        object-fit: cover;
+        z-index: 0;
+}
+
+#menu {
+        z-index: 20;
+        border-radius: 30px 30px 0px 0px;
+        background-color: #f6f6f6;
+        padding: 10px 30px 0px 20px;
+        margin-top: -50px;
+        display: flex;
+        flex-direction: column;
+    &__title_page {
+        font-family: Shrikhand;
+        font-weight: normal;
+        font-size: 25px;
+        display: flex;
+        }
+    & h2 {
+        padding: 10px;
+        text-transform: uppercase;
+        font-size: 18px;
+        padding: 10px;
+        }
+    & div [class*="underline"] {
+        display: inline-block;
+        border-bottom: 3px solid #99E2D0;
+        padding-bottom: 10px;
+        line-height: 70%;
+        }
+    & .heart {
+        right: 0;
+        position: absolute;
+        margin-top: 0;
+    }
+    &__btn-cmd {
+        display: flex;
+        padding: 50px 0px 80px 0px;
+        justify-content: center;
+        }
+    &__menu-cards{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        }
+}
+
+.repas {
+        max-width: 350px;
+        width:350px;
+        height: 50px;
+        background-color: #ffffff;
+        padding: 20px;
+        margin: 10px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+        display: grid;
+        grid-template-columns: 50% 40% 10% 0%;
+        grid-template-areas: 
+        "nom nom prix icone"
+        "desc desc prix icone";
+    &__nom-plat{
+        grid-area: nom;
+        font-weight: bold;
+        @include textnowrap;
+        }
+    &__desc-plat {
+        grid-area: desc;
+        @include textnowrap;
+        }
+    &__prix-plat {
+        grid-area: prix;
+        font-weight: bold;
+        grid-column-start: 3;
+        grid-row-start: 2;
+        }
+     &__container-icone {
+        display: none;
+        margin-right: 0;
+        border-radius: 0px 20px 20px 0px;
+        width: 100%;
+        max-width:100%;
+        padding: 0px 20px 0px 0px;
+        margin-top: -20px;
+        align-items: center;
+        align-self: center;
+        background-color: #99E2D0;
+        grid-area: icone;
+        }
+}
+
+.fas.fa-check-circle {
+        color: #ffffff;
+        font-size: 30px;
+        padding: 30px;
+        display: flex;
+        animation: rotate 0.7s linear;
+}
+
+.repas:hover {
+        grid-template-columns: 50% 20% 10% 20%;
+}    
+
+.repas:hover > .repas{
+    &__container-icone {
+        display:flex;
+        animation: leftanim 0.7s linear;
+        }
+    &__desc-plat {
+        padding-bottom: 20px;
+        }
+}
+
+.repas:hover > .fas.fa-check-circlecone {
+        margin-right: -20px;
+        display: flex;
+}
+
+.commander {
+        background-image: linear-gradient(#9356DC, #FF79DA);
+        border-radius: 20px;
+        padding: 10px 0px 10px 0px;
+        width: 300px;
+        font-size: 20px;
+        box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+        border: hidden;
+        color: white;
+        cursor: pointer;
+}
