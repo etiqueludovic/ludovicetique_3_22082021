@@ -1,0 +1,16 @@
+@mixin button{
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    border: hidden;
+}
+
+@mixin desc {
+    max-width: 70%;
+    padding: 20px;
+}
+
+@mixin textnowrap {
+    text-overflow: "...";
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space:nowrap;
+}
