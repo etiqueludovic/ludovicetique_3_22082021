@@ -1,0 +1,295 @@
+@import 'keyframes';
+@import "mixin";
+@import 'pages';
+
+$color-primaire:#9356DC;
+$color-secondaire:#FF79DA;
+$color-tertiaire:#99E2D0;
+
+$color-fond:#f1f1f1;
+$color-fond2:#f6f6f6;
+$color-black:#000000;
+
+* {
+        margin: 0;
+        padding: 0;
+        font-family: Roboto;
+        max-width: 100%;
+}
+
+#container{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        background-color: $color-fond;
+        opacity: 0.9;
+        transition: 3s;
+        animation: fond 4s linear;
+        visibility: hidden;
+        z-index:1000;
+    &__loader{
+        position: absolute;
+        margin: auto;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: linear-gradient($color-primaire, $color-secondaire, $color-tertiaire);
+        animation: animate 4s linear;
+        top: 0; left: 0; right: 0; bottom: 0;
+        visibility: hidden;    
+    }
+}
+
+header {
+        display: flex;
+        justify-content: center;
+}
+
+#logo {
+        font-family: Shrikhand;
+        font-size: 40px;
+}
+
+#ville {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        column-gap: 1rem;
+        background-color: #EFEFEF;
+}
+
+img {
+        max-width: 100%;
+        object-fit: cover;
+        border-radius: 10px 10px 0px 0px;
+}
+
+#desc {
+        display: flex;
+        flex-direction: column;
+        background-color: $color-fond2; 
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        height: 270px;
+    &__title{
+        @include desc;
+        }
+    &__decouverte{
+        font-size: 20px;
+        @include desc;
+        padding-top: 0;
+        }
+    &__button{
+        background-image: linear-gradient($color-primaire, $color-secondaire);
+        border-radius: 20px;
+        padding: 10px 0px 10px 0px;
+        width: 300px;
+        font-size: 20px;
+        color: $color-fond2;
+        @include button;
+        }
+}
+
+.search{
+        display: flex;
+        flex-direction: column;
+        margin: 30px;
+    &__button{
+        display: flex;
+        text-align: left;
+        max-width: 90%;
+        padding: 15px;
+        border-radius: 15px;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        @include button;
+        @media screen and (min-width: 800px) {
+            max-width: 500px;
+        }
+        }
+    &__icone{
+        padding: 0px 20px 0px 20px;
+        }
+    & .fas.fa-store{
+        color:$color-primaire;
+        }
+    & .fas{
+        color: grey;
+        }
+    &__icone-number{
+        border-radius: 50%;
+        padding: 3px 8px;
+        background: $color-primaire;
+        color: white;
+        text-align: center;
+        font: 15px Arial, sans-serif;
+        margin-left: -25px;
+        }
+    @media  screen and (min-width: 800px) {
+        display: flex;
+        flex-direction: initial;
+        flex-wrap: wrap;
+        margin: 30px;
+        }
+}
+
+h2{
+        padding:20px;
+        width:100%;
+}
+
+#zone1 {
+        background-color: #f6f6f6;
+        max-width: 100%;
+        padding: 20px;
+}
+
+.restaurants {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 250px);
+        row-gap: 1rem;
+        justify-content: center;
+        justify-items: center;
+    &__Vue-resto {
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        background-color: #ffffff;
+        width: 90%;
+        box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+        }
+    &__Vue-resto img {
+        object-fit: cover;
+        height: 175px;
+        width: 100%;
+        }
+    &__Vue-resto h3, &__vue-resto-ville {
+        padding :5px 0px 5px 10px;
+        color:  black;
+        text-decoration: none;
+        }
+    &__text-resto, .coeur{
+        display: inline;
+        }
+    &__coeur{
+        float: right;
+        margin-top: -40px;
+        margin-right: 20px;
+        font-size: 30px;
+        -webkit-text-stroke: 2px;
+        -webkit-text-stroke-color: black;
+        color:transparent;
+        transition: 0.5s;
+        }
+    @media screen and (min-width: 800px){
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 250px);
+    }
+}
+
+#resto1, #resto2 {
+        position: relative;
+        z-index:0;
+}
+
+#resto1 .restaurants__new, #resto2 .restaurants__new {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        border-radius: 5px;
+        background-color: #c0e9c3;
+        color: #16b84e;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 10px;
+}
+
+.heart {
+        width: 30px;
+        fill: transparent;
+        stroke: black;
+        stroke-width: 40px;
+        float: right;
+        margin-top: -40px;
+        margin-right: 20px;
+        font-size: 30px;
+}
+
+.stop1{
+        stop-color: $color-primaire;
+    }
+.stop2{
+        stop-color: $color-secondaire;
+    }
+
+path {
+        fill: transparent;
+        stroke: black;
+        stroke-width: 40px;
+    &:hover{
+        animation: coeur 0.5s linear forwards;
+    }
+}
+
+a, a:hover, a:active, a:visited {
+        text-decoration: none;
+}
+
+@media screen and (min-width: 800px){
+ ul {
+        display: flex;
+        justify-content: space-around; 
+    }
+}
+
+button:hover {
+        transform:scale(1.02);
+        cursor:pointer;
+}
+
+footer {
+        background-color: #353535;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding: 10px 30px 20px 30px;
+    & li {
+        list-style: none;
+        text-decoration: none;
+        padding-bottom: 10px;
+    }
+    & a {
+        color: white;
+    }
+}
+
+.fas.fa-utensils{
+        padding-right: 17px;
+}
+
+footer li {
+        list-style: none;
+        text-decoration: none;
+        padding-bottom: 5px;
+}
+
+footer i {
+        padding-right: 10px;
+}
+
+footer a {
+        color: white;
+}
+
+h4 {
+        font-family: Shrikhand;
+        padding-bottom: 20px;
+        font-size:20px;
+        font-weight: normal;
+}
