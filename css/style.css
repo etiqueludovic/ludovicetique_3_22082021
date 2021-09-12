@@ -192,12 +192,14 @@ img {
 .repas__nom-plat {
   grid-area: nom;
   font-weight: bold;
+  text-overflow: "...";
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 .repas__desc-plat {
   grid-area: desc;
+  text-overflow: "...";
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -442,6 +444,8 @@ h2 {
   margin-top: -40px;
   margin-right: 20px;
   font-size: 30px;
+  -webkit-text-stroke: 2px;
+  -webkit-text-stroke-color: black;
   color: transparent;
   transition: 0.5s;
 }
@@ -552,4 +556,8 @@ h4 {
   padding-bottom: 20px;
   font-size: 20px;
   font-weight: normal;
+}
+
+a:hover {
+  cursor: pointer;
 }
