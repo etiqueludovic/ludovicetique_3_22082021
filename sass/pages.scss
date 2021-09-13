@@ -1,3 +1,11 @@
+$color-primaire:#9356DC;
+$color-secondaire:#FF79DA;
+$color-tertiaire:#99E2D0;
+
+$color-fond:#f1f1f1;
+$color-fond2:#f6f6f6;
+$color-black:#000000;
+
 #menu{
     &__entree1{
         opacity:0;
@@ -96,9 +104,16 @@ img {
         margin-top: 0;
     }
     &__btn-cmd {
-        display: flex;
-        padding: 50px 0px 80px 0px;
+        background-image: linear-gradient($color-secondaire, $color-primaire);
+        border-radius: 200px;
+        padding: 15px 35px 15px 35px;
+        font-size: 17px;
+        color: $color-fond2;
+        @include button;
         justify-content: center;
+        max-width: 250px;
+        display:flex;
+        margin: 20px auto 70px auto;
         }
     &__menu-cards{
         display:flex;
@@ -108,14 +123,14 @@ img {
 }
 
 .repas {
-        max-width: 350px;
+        max-width: 100%;
         width:350px;
         height: 50px;
         background-color: #ffffff;
         padding: 20px;
         margin: 10px;
         border-radius: 20px;
-        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
         display: grid;
         grid-template-columns: 50% 40% 10% 0%;
         grid-template-areas: 
@@ -149,6 +164,9 @@ img {
         background-color: #99E2D0;
         grid-area: icone;
         }
+    @media screen and (max-width:800px) {
+            width:275px;          
+        }
 }
 
 .fas.fa-check-circle {
@@ -168,6 +186,9 @@ img {
         display:flex;
         animation: leftanim 0.7s linear;
         }
+    &_prix-plat {
+        animation: leftanim 0.7s linear;
+    }
     &__desc-plat {
         padding-bottom: 20px;
         }
@@ -184,8 +205,7 @@ img {
         padding: 10px 0px 10px 0px;
         width: 300px;
         font-size: 20px;
-        box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
-        border: hidden;
+        @include button;
         color: white;
         cursor: pointer;
 }
