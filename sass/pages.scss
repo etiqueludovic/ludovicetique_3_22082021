@@ -120,6 +120,7 @@ img {
         display:flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
         }
 }
 
@@ -152,6 +153,10 @@ img {
         grid-column-start: 3;
         grid-row-start: 2;
         }
+    &_prix-plat:hover {
+        transition: 0.5s ease;
+        padding-right: 70px;
+    }
      &__container-icone {
         display: none;
         margin-right: 0;
@@ -180,6 +185,7 @@ img {
 
 .repas:hover {
         grid-template-columns: 50% 20% 10% 20%;
+        transition: 0.7s ease;
 }    
 
 .repas:hover > .repas{
@@ -187,15 +193,13 @@ img {
         display:flex;
         animation: leftanim 0.7s linear;
         }
-    &_prix-plat {
-        animation: leftanim 0.7s linear;
-    }
     &__desc-plat {
         padding-bottom: 20px;
         }
 }
 
 .repas:hover > .fas.fa-check-circlecone {
+        transition: 0.7s ease;
         margin-right: -20px;
         display: flex;
 }
