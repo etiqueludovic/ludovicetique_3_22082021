@@ -166,9 +166,17 @@ img {
   margin-top: 0;
 }
 #menu__btn-cmd {
-  display: flex;
-  padding: 50px 0px 80px 0px;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 200px;
+  padding: 15px 35px 15px 35px;
+  font-size: 17px;
+  color: #f6f6f6;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  border: hidden;
   justify-content: center;
+  max-width: 250px;
+  display: flex;
+  margin: 20px auto 70px auto;
 }
 #menu__menu-cards {
   display: flex;
@@ -177,14 +185,14 @@ img {
 }
 
 .repas {
-  max-width: 350px;
+  max-width: 100%;
   width: 350px;
   height: 50px;
   background-color: #ffffff;
   padding: 20px;
   margin: 10px;
   border-radius: 20px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
   display: grid;
   grid-template-columns: 50% 40% 10% 0%;
   grid-template-areas: "nom nom prix icone" "desc desc prix icone";
@@ -221,6 +229,11 @@ img {
   background-color: #99E2D0;
   grid-area: icone;
 }
+@media screen and (max-width: 800px) {
+  .repas {
+    width: 275px;
+  }
+}
 
 .fas.fa-check-circle {
   color: #ffffff;
@@ -238,6 +251,9 @@ img {
   display: flex;
   animation: leftanim 0.7s linear;
 }
+.repas:hover > .repas_prix-plat {
+  animation: leftanim 0.7s linear;
+}
 .repas:hover > .repas__desc-plat {
   padding-bottom: 20px;
 }
@@ -253,7 +269,7 @@ img {
   padding: 10px 0px 10px 0px;
   width: 300px;
   font-size: 20px;
-  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
   border: hidden;
   color: white;
   cursor: pointer;
@@ -325,44 +341,44 @@ img {
   align-items: center;
   align-content: center;
   height: 270px;
+  padding: 20px 0px 20px 0px;
+  font-size: 13px;
 }
 #desc__title {
-  max-width: 70%;
+  font-size: 22px;
   padding: 20px;
 }
 #desc__decouverte {
-  font-size: 20px;
-  max-width: 70%;
+  font-size: 17px;
   padding: 20px;
   padding-top: 0;
 }
 #desc__button {
-  background-image: linear-gradient(#9356DC, #FF79DA);
-  border-radius: 20px;
-  padding: 10px 0px 10px 0px;
-  width: 300px;
-  font-size: 20px;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 200px;
+  padding: 15px 25px 15px 25px;
+  font-size: 17px;
   color: #f6f6f6;
-  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
   border: hidden;
 }
 
 .search {
   display: flex;
   flex-direction: column;
-  margin: 30px;
+  margin: 0px;
 }
 .search__button {
   display: flex;
   text-align: left;
   max-width: 90%;
-  padding: 15px;
+  padding: 20px;
   border-radius: 15px;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: bold;
   margin-bottom: 20px;
   margin-left: 20px;
-  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
   border: hidden;
 }
 @media screen and (min-width: 800px) {
@@ -386,7 +402,7 @@ img {
   color: white;
   text-align: center;
   font: 15px Arial, sans-serif;
-  margin-left: -25px;
+  margin-left: -30px;
 }
 @media screen and (min-width: 800px) {
   .search {
@@ -397,15 +413,18 @@ img {
   }
 }
 
+#button3 {
+  background-color: #f5edff;
+}
+
 h2 {
   padding: 20px;
-  width: 100%;
 }
 
 #zone1 {
   background-color: #f6f6f6;
   max-width: 100%;
-  padding: 20px;
+  padding-bottom: 20px;
 }
 
 .restaurants {
@@ -422,7 +441,7 @@ h2 {
   border-radius: 10px;
   background-color: #ffffff;
   width: 90%;
-  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
 }
 .restaurants__Vue-resto img {
   object-fit: cover;
@@ -508,7 +527,7 @@ a, a:hover, a:active, a:visited {
   }
 }
 button:hover {
-  transform: scale(1.02);
+  filter: brightness(1.2);
   cursor: pointer;
 }
 
