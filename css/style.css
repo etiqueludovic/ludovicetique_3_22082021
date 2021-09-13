@@ -359,7 +359,7 @@ img {
 .search {
   display: flex;
   flex-direction: column;
-  margin: 0px;
+  margin: 30px auto 30px auto;
 }
 .search__button {
   display: flex;
@@ -417,7 +417,7 @@ h2 {
 #zone1 {
   background-color: #f6f6f6;
   max-width: 100%;
-  padding-bottom: 20px;
+  padding: 50px 0px 90px 0px;
 }
 
 .restaurants {
