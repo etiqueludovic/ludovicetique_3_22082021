@@ -91,6 +91,9 @@ img {
         font-size: 17px;
         color: $color-fond2;
         @include button;
+        &:hover{
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+        }
         }
 }
 
@@ -166,7 +169,7 @@ h2{
         border-radius: 10px;
         background-color: #ffffff;
         width: 90%;
-        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
         }
     &__Vue-resto img {
         object-fit: cover;
@@ -255,7 +258,7 @@ a, a:hover, a:active, a:visited {
 }
 
 button:hover {
-        filter: brightness(1.2);
+        filter: brightness(1.2); 
         cursor:pointer;
 }
 
