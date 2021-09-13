@@ -189,9 +189,13 @@ h2{
         color:transparent;
         transition: 0.5s;
         }
-    @media screen and (min-width: 800px){
+    @media screen and (min-width: 800px) and (max-width: 1980px){
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 250px);
+    }
+    @media screen and (min-width: 1981px){
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
     }
 }
 
