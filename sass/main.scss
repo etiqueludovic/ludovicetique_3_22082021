@@ -73,20 +73,22 @@ img {
         align-items: center;
         align-content: center;
         height: 270px;
+        padding: 20px 0px 20px 0px;
+        font-size: 13px;
     &__title{
+        font-size: 22px;
         @include desc;
         }
     &__decouverte{
-        font-size: 20px;
+        font-size: 17px;
         @include desc;
         padding-top: 0;
         }
     &__button{
-        background-image: linear-gradient($color-primaire, $color-secondaire);
-        border-radius: 20px;
-        padding: 10px 0px 10px 0px;
-        width: 300px;
-        font-size: 20px;
+        background-image: linear-gradient($color-secondaire, $color-primaire);
+        border-radius: 200px;
+        padding: 15px 25px 15px 25px;
+        font-size: 17px;
         color: $color-fond2;
         @include button;
         }
@@ -95,14 +97,14 @@ img {
 .search{
         display: flex;
         flex-direction: column;
-        margin: 30px;
+        margin: 0px;
     &__button{
         display: flex;
         text-align: left;
         max-width: 90%;
-        padding: 15px;
+        padding: 20px;
         border-radius: 15px;
-        font-size: 20px;
+        font-size: 17px;
         font-weight: bold;
         margin-bottom: 20px;
         margin-left: 20px;
@@ -127,7 +129,7 @@ img {
         color: white;
         text-align: center;
         font: 15px Arial, sans-serif;
-        margin-left: -25px;
+        margin-left: -30px;
         }
     @media  screen and (min-width: 800px) {
         display: flex;
@@ -137,15 +139,18 @@ img {
         }
 }
 
+#button3{
+    background-color:#f5edff;
+}
+
 h2{
         padding:20px;
-        width:100%;
 }
 
 #zone1 {
         background-color: #f6f6f6;
         max-width: 100%;
-        padding: 20px;
+        padding-bottom: 20px;
 }
 
 .restaurants {
@@ -161,7 +166,7 @@ h2{
         border-radius: 10px;
         background-color: #ffffff;
         width: 90%;
-        box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
         }
     &__Vue-resto img {
         object-fit: cover;
@@ -246,7 +251,7 @@ a, a:hover, a:active, a:visited {
 }
 
 button:hover {
-        transform:scale(1.02);
+        filter: brightness(1.2);
         cursor:pointer;
 }
 
